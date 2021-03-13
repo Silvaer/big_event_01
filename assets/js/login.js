@@ -51,7 +51,7 @@ $(function () {
             success: (res) => {
                 if (res.status != 0) return layer.msg(res.message, { icon: 5 })
                 layer.msg('恭喜您，登录成功', { icon: 6 });
-                localStorage.getItem('myToken', res.token);
+                localStorage.setItem('myToken', res.token);
                 location.href = '/index.html';
                 // location.assign('/index.html');
             }
