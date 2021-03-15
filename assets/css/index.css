@@ -24,6 +24,8 @@ iframe {
 }
 
 .userinfo {
+    /* width: 100%; */
+    /* box-sizing: border-box; */
     height: 60px;
     line-height: 60px;
     text-align: center;
