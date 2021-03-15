@@ -17,7 +17,7 @@ function getUserinfo() {
         url: "/my/userinfo",
         data: {},
         success: (res) => {
-            console.log(res);
+            // console.log(res);
             if (res.status != 0) {
                 return layer.msg(res.message, { icon: 6 });
             }
@@ -29,7 +29,7 @@ function getUserinfo() {
 
 function renderAvatar(user) {
     let name = user.nickname || user.username;
-    $('#welcome').text(`欢迎` + name);
+    $('#welcome').html(`欢迎&nbsp;&nbsp;` + name);
     if (user.user_pic == null) {
         $('.layui-nav-img').hide();
         $('.text_avater').show().text(name[0].toUpperCase());
